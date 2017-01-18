@@ -48,13 +48,16 @@ MyClass2("toto").foo()
 
 struct MyStruct2{
     var name: String {
-    
     willSet(name){
         print("before")
     }
     didSet{
         print("after")
     }
+    }
+    
+    mutating func setName(str: String){
+        name = str;
     }
 }
 
